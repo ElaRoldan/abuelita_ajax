@@ -5,16 +5,13 @@ get '/' do
   # Visita app/views/index.erb
 end
 
-
-#ESTE ES UN METODO POST
 post '/abuelita' do
-      #ESTE METODO ES SMILIAR A UN GETS CHOMP 
     user_input = params[:user_input]
-    response = grandma(user_input)   
+    response = grandma(user_input) 
+    # sirve para detectar una peticion de ajax   
     if request.xhr?
        # respond to Ajax request
-       # grandma(user_input)
-       #response
+       response
     else
        # respond to normal request
        redirect to ("/?abuelita=#{response}")

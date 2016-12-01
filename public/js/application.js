@@ -5,16 +5,16 @@ $(document).ready(function() {
 	// de HTML este exista ya en la página. 
 
 
-  // $( "#target" ).submit(function( event ) {
+  $( "#target" ).submit(function( event ) {
       
-  //     event.preventDefault();
-  //     userInput = $(this).serialize(); //serialize // vas a obtener los valores de entrada en la forma
-  //     console.log(userInput);
-  //     $.post("/abuelita", userInput, function(data) {
-  //      $(".abue").html(data);
+      event.preventDefault();
+      userInput = $(this).serialize(); //serialize // vas a obtener los valores de entrada en la forma
+      console.log(userInput);
+      $.post("/abuelita", userInput, function(data) {
+       $(".abue").html(data);
 
-  //      });
-  // });
+       });
+  });
 
 
 
